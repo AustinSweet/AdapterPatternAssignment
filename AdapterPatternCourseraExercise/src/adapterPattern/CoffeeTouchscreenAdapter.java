@@ -29,7 +29,7 @@ public class CoffeeTouchscreenAdapter implements CoffeeMachineInterface{
 			return true;
 		}
 		else {
-			System.out.println("Please enter a valid selection.");
+			System.out.println("Please start over and enter a valid selection.");
 			return false;
 		}
 	}
