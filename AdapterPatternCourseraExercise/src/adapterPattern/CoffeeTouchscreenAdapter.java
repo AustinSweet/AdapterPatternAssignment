@@ -13,19 +13,19 @@ public class CoffeeTouchscreenAdapter implements CoffeeMachineInterface{
 	
 	public static boolean chooseCoffee(int input) {
 			 if (input == 1) {
-			chooseFirstSelection();
+			System.out.println(chooseFirstSelection());
 			return true;
 		}
 		else if (input == 2) {
-			chooseSecondSelection();
+			System.out.println(chooseSecondSelection());
 			return true;
 		}
 		else if (input == 3) {
-			OldCoffeeMachine.selectA();
+			System.out.println(OldCoffeeMachine.selectA());
 			return true;
 		}
 		else if (input == 4) {
-			OldCoffeeMachine.selectB();
+			System.out.println(OldCoffeeMachine.selectB());
 			return true;
 		}
 		else {
