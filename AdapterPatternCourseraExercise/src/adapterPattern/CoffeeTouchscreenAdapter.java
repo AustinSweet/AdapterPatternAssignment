@@ -3,7 +3,6 @@ package adapterPattern;
 import java.util.Scanner;
 
 public class CoffeeTouchscreenAdapter implements CoffeeMachineInterface{
-	
 	//We are going to use numbered buttons to select
 	//one of two orders from either the new or old coffee machines.
 	//newCoffee1 = 1;
@@ -21,11 +20,11 @@ public class CoffeeTouchscreenAdapter implements CoffeeMachineInterface{
 			return true;
 		}
 		else if (input == 3) {
-			System.out.println(OldCoffeeMachine.selectA());
+			System.out.println(CoffeeMachineInterface.chooseFirstSelection());
 			return true;
 		}
 		else if (input == 4) {
-			System.out.println(OldCoffeeMachine.selectB());
+			System.out.println(CoffeeMachineInterface.chooseSecondSelection());
 			return true;
 		}
 		else {
@@ -45,10 +44,12 @@ public class CoffeeTouchscreenAdapter implements CoffeeMachineInterface{
 	}
 	
 	public static void main(String[] args) {
+		//Actual System Operation
 		System.out.println("Choose your coffee selection:\n 1. Black Coffee(New Machine)\n 2. Decaf Coffee(New Machine)\n "
-														+ "3. Black Coffee(Old Machine)\n 4. Decaf Coffee(Old Machine)");
+														+ "3. Black Coffee(Old Machine)\n 4. Decaf Coffee(Old Machine)\n");
 		Scanner userInput = new Scanner(System.in);
 		chooseCoffee(userInput.nextInt());
+		
 		userInput.close();
 	}
 }

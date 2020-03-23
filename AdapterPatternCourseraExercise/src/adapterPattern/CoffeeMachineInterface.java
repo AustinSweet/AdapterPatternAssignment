@@ -1,9 +1,11 @@
 package adapterPattern;
 
 public interface CoffeeMachineInterface {
-	public static void chooseFirstSelection() {
+	public static String chooseFirstSelection() {
+		return OldCoffeeMachine.selectA();
 	}
 	
-	public static void chooseSecondSelection() {
+	public static String chooseSecondSelection() {
+		return OldCoffeeMachine.selectB();
 	}
 }
